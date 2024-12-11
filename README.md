@@ -1,2 +1,2 @@
 # motif_finding
-Algorithms for finding motifs in DNA
+Implementation and comparison of eight algorithms for finding motifs in DNA.
