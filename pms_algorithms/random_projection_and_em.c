@@ -294,20 +294,6 @@ void compute_consensus_motif(char **motifs, int num_seqs, int l, char* consensus
                     break;
                 }
             }
-            // switch (motifs[i][j]) {
-            //     case 'a':
-            //         counts[j][0]++;
-            //         break;
-            //     case 'c':
-            //         counts[j][1]++;
-            //         break;
-            //     case 'g':
-            //         counts[j][2]++;
-            //         break;
-            //     case 't':
-            //         counts[j][3]++;
-            //         break;
-            // }
         }
     }
 
@@ -341,12 +327,6 @@ void find_best_motifs(char **sequences, int num_sequences, double **pwm, char **
                         break;
                     }
                 }
-                // switch (sequences[i][j+k]) {
-                //     case 'a': p=0; break;
-                //     case 'c': p=1; break;
-                //     case 'g': p=2; break;
-                //     case 't': p=3; break;
-                // }
                 current_prob *= pwm[p][k];
             }
             if (best_prob < current_prob){
@@ -376,12 +356,6 @@ double calculate_likelihood_ratio(char **best_motifs, double **S_pwm, int num_mo
                     break;
                 }
             }
-            // switch (best_motifs[i][m]) {
-            //     case 'a': p=0; break;
-            //     case 'c': p=1; break;
-            //     case 'g': p=2; break;
-            //     case 't': p=3; break;
-            // }
             likelihood_ratio_w *= S_pwm[p][m];
             likelihood_ratio_b *= background[p];
         }
